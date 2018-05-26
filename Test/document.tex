@@ -11,10 +11,10 @@
 
 \usepackage{makeidx}         	% Index
 \usepackage{multicol}        	% Zweispaltiger Index
-%\usepackage[bottom]{footmisc}	% Erzeugung von Fuï¿½noten
+%\usepackage[bottom]{footmisc}	% Erzeugung von Fußnoten
 \usepackage{float}
 \restylefloat{table}
-
+\usepackage[labelfont=bf,textfont=md]{caption}
 %%-----------------------------------------------------
 %\newif\ifpdf
 %\ifx\pdfoutput\undefined
@@ -33,13 +33,12 @@
 %\usepackage[plainpages=false]{hyperref}
 %\fi
 
-
 %%-----------------------------------------------------
 \usepackage{color}				% Farbverwaltung
 %\usepackage{ngerman} 			% Neue deutsche Rechtsschreibung
 \usepackage[english, ngerman]{babel}
-\usepackage[latin1]{inputenc} 	% Ermï¿½glicht Umlaute-Darstellung
-%\usepackage[utf8]{inputenc}  	% Ermï¿½glicht Umlaute-Darstellung unter Linux (je nach verwendetem Format)
+%\usepackage[latin1]{inputenc} 	% Ermöglicht Umlaute-Darstellung
+\usepackage[utf8]{inputenc}  	% Ermöglicht Umlaute-Darstellung unter Linux (je nach verwendetem Format)
 
 %-----------------------------------------------------
 \usepackage{listings} 			% Code-Darstellung
@@ -73,6 +72,7 @@
 \makeindex 						% Index-Erstellung
 
 
+
 %--------------------------------------------------------------------------
 \begin{document}
 %------------------------- Titelblatt -------------------------------------
@@ -98,7 +98,9 @@
 \frontmatter 
 %--------------------------------------------------------------------------
 \input{chapters/Kurzfassung} 			% Kurzfassung Deutsch/English
-\tableofcontents 						% Inhaltsverzeichnis
+\tableofcontents						% Inhaltsverzeichnis
+\listoffigures               % Abbildungsverzeichnis (optional)
+\listoftables               % Tabellenverzeichnis (optional)
 %--------------------------------------------------------------------------
 \mainmatter                        		% Hauptteil (ab hier arab. Seitenzahlen)
 %--------------------------------------------------------------------------
@@ -115,11 +117,12 @@
 \backmatter                        		% Anhang
 %-------------------------------------------------------------------------
 \bibliographystyle{geralpha}			% Literaturverzeichnis
+
 \bibliography{literatur}     			% BibTeX-File literatur.bib
 %--------------------------------------------------------------------------
 \printindex 							% Index (optional)
 %--------------------------------------------------------------------------
-\begin{appendix}						% Anhï¿½nge sind i.d.R. optional
+\begin{appendix}						% Anhänge sind i.d.R. optional
    \include{chapters/Glossar}			% Glossar   
 \end{appendix}
 
