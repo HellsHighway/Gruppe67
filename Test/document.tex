@@ -6,8 +6,8 @@
 % Basis: Vorlage svmono des Springer Verlags
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \documentclass[envcountsame,envcountchap, deutsch]{i-studis}
+
 
 \usepackage{makeidx}         	% Index
 \usepackage{multicol}        	% Zweispaltiger Index
@@ -72,7 +72,6 @@
 \makeindex 						% Index-Erstellung
 
 
-
 %--------------------------------------------------------------------------
 \begin{document}
 %------------------------- Titelblatt -------------------------------------
@@ -82,7 +81,7 @@
 \supervisor{Prof. Vorname Name} 		% Betreuer der Arbeit
 \author{Bearbeiter 1: Marc Meyer \\Bearbeiter 2: Lionel Schroeder \\Bearbeiter 3: Tom Walter}							% Autor der Arbeit
 \groupid{67}
-\address{Schneidershof 1, 54293 Trier} 							% Im Zusammenhang mit dem Datum wird hinter dem Ort ein Komma angegeben
+\address{Trier} 							% Im Zusammenhang mit dem Datum wird hinter dem Ort ein Komma angegeben
 \submitdate{29.5.18} 				% Abgabedatum
 %\begingroup
 %  \renewcommand{\thepage}{title}
@@ -98,7 +97,7 @@
 \frontmatter 
 %--------------------------------------------------------------------------
 \input{chapters/Kurzfassung} 			% Kurzfassung Deutsch/English
-\tableofcontents						% Inhaltsverzeichnis
+\tableofcontents 						% Inhaltsverzeichnis
 \listoffigures               % Abbildungsverzeichnis (optional)
 \listoftables               % Tabellenverzeichnis (optional)
 %--------------------------------------------------------------------------
@@ -116,14 +115,14 @@
 %--------------------------------------------------------------------------
 \backmatter                        		% Anhang
 %-------------------------------------------------------------------------
-\bibliographystyle{geralpha}			% Literaturverzeichnis
-
+%\bibliographystyle{geralpha}			% Literaturverzeichnis
+\bibliographystyle{unsrt}
 \bibliography{literatur}     			% BibTeX-File literatur.bib
 %--------------------------------------------------------------------------
 \printindex 							% Index (optional)
 %--------------------------------------------------------------------------
 \begin{appendix}						% Anhänge sind i.d.R. optional
-   \include{chapters/Glossar}			% Glossar   
+   %\include{chapters/Glossar}			% Glossar   
 \end{appendix}
 
 \end{document}
